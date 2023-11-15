@@ -26,4 +26,8 @@
     perdio -------> volver{Sí escribes 1 puedes volver a jugar el juego del ahorcado, Sí escribes 2 puedes salir al menú de juegos}
     volver -->|1|ahorcado
     volver -->|2|seleccion
+    sopa --> solicitar[Solicitar al jugador un número de 10 a 30, para las dimensiones de la sopa de letras de forma cuadrada]
+    solicitar --> pide[Pedir al jugador las palabras que desea incluir en la sopa]
+    pide --> crea[Crear una matriz vacía con las dimensiones especificadas por el jugador]
+    crea --> llena[Llenar la matriz con letras aleatorias]
 ```
