@@ -30,4 +30,16 @@
     solicitar --> pide[Pedir al jugador las palabras que desea incluir en la sopa]
     pide --> crea[Crear una matriz vacía con las dimensiones especificadas por el jugador]
     crea --> llena[Llenar la matriz con letras aleatorias]
+    llena --> ingresada[Para cada palabra ingresada por el jugador, decidir aleatoriamente  la orientación de la palabra]
+    ingresada --> selecciona[Para cada palabra se selecciona aleatoriamente una posición en la matriz]
+    selecciona --> verifica[Verificar si es posible colocar la palabra sin superponer con otra palabra y sin salirse de la matriz]
+    verifica --> coloca[Colocar la palabra en la matriz si es posible, de lo contrario vuelve a intentar con una nueva posición y orientación]
+    coloca --> ver[Visualización de la sopa de letras en la consola]
+    ver --> encontrada[Por cada palabra encontrada, el usuario ingresa la coordenada en terminos de i, j]
+    encontrada --> coordenadas[Coordenada primer letra, coordenada última letra]
+    coordenadas --> si[Sí lo anterior ocurreo, la palabra encontrada tendrá un cambio visual]
+    si --> sisi[Sí lo anterior ocurre agrega un puntaje positivo]
+    sisi --> volverr{Sí escribes 1 puedes volver a jugar el juego de la sopa de letras, Sí escribes 2 puedes salir al menú de juegos}
+    volverr --> |1|sopa
+    volverr --> |2|seleccion
 ```
