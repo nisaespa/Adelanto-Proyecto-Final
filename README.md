@@ -51,6 +51,21 @@
     condiciones -->|True|empate[Empate, nadie pierde vidas]
     condiciones -->|False|condiciones2{Sí jugador = papel y computador = piedra, entonces}
     condiciones2 -->|True|jugadorgana[Gana jugador, vidas computador = vidas computador - 1]
+    condiciones2 --> |False|condiciones3{Sí jugador = tijera y computador = piedra, entonces}
+    condiciones3 -->|True|computadorgana[Gana computador, vidas jugador = vidas jugador - 1]
+    condiciones3 --> |False|condiciones4{Sí jugador = piedra y computador = papel, entonces}
+    condiciones4 -->|True|computadorgana[Gana computador, vidas jugador = vidas jugador - 1]
+    condiciones4 --> |False|condiciones5{Sí jugador = papel y computador = papel, entonces}
+    condiciones5 -->|True|empate[Empate, nadie pierde vidas]
+    condiciones5 --> |False|condiciones6{Sí jugador = tijera y computador = papel, entonces}
+    condiciones6 -->|True|jugadorgana[Gana jugador, vidas computador = vidas computador - 1]
+    condiciones6 --> |False|condiciones7{Sí jugador = piedra y computador = tijera, entonces}
+    condiciones7 -->|True|jugadorgana[Gana jugador, vidas computador = vidas computador - 1]
+    condiciones7 --> |False|condiciones8{Sí jugador = papel y computador = tijera, entonces}
+    condiciones8 -->|True|computadorgana[Gana computador, vidas jugador = vidas jugador - 1]
+    condiciones8 --> |False|condiciones9{Sí jugador = tijera y computador = tijera, entonces}
+    condiciones9 -->|True|empate[Empate, nadie pierde vidas]
+
     bucless -->|False|sisisi{Sí vidas jugador = 0}
     sisisi --> |True|perdiste[La computadora ganó]
     sisisi --> |False|gana[El jugador ganó]
