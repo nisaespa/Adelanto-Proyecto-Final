@@ -48,7 +48,9 @@
     bucless -->|True|computador[computador escoja aleatoriamente entre las palabras de la Lista]
     computador --> jugador[Pedir al jugador que escriba piedra, papel o tijera]
     jugador --> condiciones{Sí jugador = piedra y computador = piedra, entonces}
-    condiciones -->|True|empate
+    condiciones -->|True|empate[Empate, nadie pierde vidas]
+    condiciones -->|False|condiciones2{Sí jugador = papel y computador = piedra, entonces}
+    condiciones2 -->|True|jugadorgana[Gana jugador, vidas computador = vidas computador - 1]
     bucless -->|False|sisisi{Sí vidas jugador = 0}
     sisisi --> |True|perdiste[La computadora ganó]
     sisisi --> |False|gana[El jugador ganó]
