@@ -42,4 +42,18 @@
     sisi --> volverr{Sí escribes 1 puedes volver a jugar el juego de la sopa de letras, Sí escribes 2 puedes salir al menú de juegos}
     volverr --> |1|sopa
     volverr --> |2|seleccion
+    piedra --> datoss[Lista con tres palabras = piedra, papel, tijera]
+    datoss --> vidas[vidas jugador = 3, vidas computador = 3]
+    vidas --> bucless{Mientras vidas jugador > 0 and vidas computador > 0}
+    bucless -->|True|computador[computador escoja aleatoriamente entre las palabras de la Lista]
+    computador --> jugador[Pedir al jugador que escriba piedra, papel o tijera]
+    jugador --> condiciones{Sí jugador = piedra y computador = piedra, entonces}
+    condiciones -->|True|empate
+    bucless -->|False|sisisi{Sí vidas jugador = 0}
+    sisisi --> |True|perdiste[La computadora ganó]
+    sisisi --> |False|gana[El jugador ganó]
+    perdiste --> volverrr{Sí escribes 1 puedes volver a jugar el juego de piedra papel y tijera, Sí escribes 2 puedes salir al menú de juegos}
+    gana --> volverrr{Sí escribes 1 puedes volver a jugar el juego de piedra papel y tijera, Sí escribes 2 puedes salir al menú de juegos}
+    volverrr --> |1|piedra
+    volverrr --> |2|seleccion
 ```
