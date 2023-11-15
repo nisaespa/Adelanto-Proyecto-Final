@@ -1,6 +1,5 @@
 # 🔥 INDUSPLAYTHON - ADELANTO PROYECTO FINAL 🔥
-*Nicolas Estupiñan* - 
-*Santiago Avendaño*
+*Nicolas Estupiñan* - *Santiago Avendaño*
 ## 👽 Logo IndusPlaython 👽
 <div align='center'>
 <figure> <img src="https://raw.githubusercontent.com/nisaespa/Taller1/main/logoindusplaython.png" alt="" width="900" height="auto"/></br>
