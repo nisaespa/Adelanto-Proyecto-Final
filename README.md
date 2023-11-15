@@ -3,7 +3,7 @@
 ```mermaid
     flowchart TD;
     inicio[INICIO] --> seleccion[Escriba 1 para jugar sopa de letras, escriba 2 para jugar ahorcado, escriba 3 para jugar piedra papel o tijera o escriba 4 para salir del juego]
-    seleccion --> |1| sopa[Sopa de letras]
+    seleccion -----> |1| sopa[Sopa de letras]
     seleccion --> |2| ahorcado[Ahorcado]
     seleccion --> |3| piedra[Piedra, papel y tijera]
     seleccion --> |4| salir[FIN]
@@ -65,7 +65,9 @@
     condiciones8 -->|True|computadorgana[Gana computador, vidas jugador = vidas jugador - 1]
     condiciones8 --> |False|condiciones9{Sí jugador = tijera y computador = tijera, entonces}
     condiciones9 -->|True|empate[Empate, nadie pierde vidas]
-
+    empate --> bucless
+    computadorgana --> bucless
+    jugadorgana --> bucless
     bucless -->|False|sisisi{Sí vidas jugador = 0}
     sisisi --> |True|perdiste[La computadora ganó]
     sisisi --> |False|gana[El jugador ganó]
