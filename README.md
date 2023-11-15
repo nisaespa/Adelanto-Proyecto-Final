@@ -1,5 +1,6 @@
 # 🔥 INDUSPLAYTHON - ADELANTO PROYECTO FINAL 🔥
-
+*Nicolas Estupiñan* - 
+*Santiago Avendaño*
 ## 👽 Logo IndusPlaython 👽
 <div align='center'>
 <figure> <img src="https://raw.githubusercontent.com/nisaespa/Taller1/main/logoindusplaython.png" alt="" width="900" height="auto"/></br>
@@ -38,6 +39,7 @@
 
 ## 🤔 DIAGRAMA DE FLUJO 🤔
 ### 🔥 En el siguiente diagrama de flujo se puede ver de forma general como se abordará el programa para los 3 juegos.
+###### En el editor de mermaid se podía ahcer más bonito y claro, pero al pasar el código a github daba error, entonces tocó dejarlo así 😔.
 ```mermaid
     flowchart TD;
     inicio[INICIO] --> seleccion[Escriba 1 para jugar sopa de letras, escriba 2 para jugar ahorcado, escriba 3 para jugar piedra papel o tijera o escriba 4 para salir del juego]
